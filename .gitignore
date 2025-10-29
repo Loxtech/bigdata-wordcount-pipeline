@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+
+# Spark / Hadoop
+*.crc
+*.eventlog
+output_dir/
+input_dir/
+.temp/
+derby.log
+
+# Encryption keys
+fernet.key
+*.pem
+
+# OS files
+.DS_Store
+
+# Virtual env
+venv/
+.env/
