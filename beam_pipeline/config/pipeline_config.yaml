@@ -1,0 +1,28 @@
+# Apache Beam Pipeline Configuration
+pipeline:
+  name: wordcount-pipeline
+  runner: DirectRunner  
+  project: your-project-id  
+  temp_location: gs://your-bucket/temp  
+
+input:
+  type: text
+  source: 
+    - path: data/input/*.txt  
+
+output:
+  type: text
+  destination: 
+    path: data/output/wordcount  
+
+processing:
+  batch_size: 1000
+  window_size: 5  
+  allowed_lateness: 1  
+  triggers:
+    type: default  
+    frequency: 1  
+
+monitoring:
+  logging_level: INFO
+  metrics_enabled: true
